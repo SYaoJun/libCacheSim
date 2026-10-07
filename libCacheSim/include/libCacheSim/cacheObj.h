@@ -169,6 +169,11 @@ typedef struct {
   int32_t freq;
 } __attribute__((packed)) Sieve_obj_params_t;
 
+typedef struct {
+  int64_t read_timestamp;   // logical time of last read access
+  int64_t write_timestamp;  // logical time of insertion/write
+} WATT_obj_metadata_t;
+
 // ############################## cache obj ###################################
 struct cache_obj;
 typedef struct cache_obj {
@@ -218,6 +223,7 @@ typedef struct cache_obj {
     Sieve_obj_params_t sieve;
     CAR_obj_metadata_t CAR;
     Clock2QPlus_obj_metadata_t Clock2QPlus;
+    WATT_obj_metadata_t WATT;
 
 #if defined(ENABLE_GLCACHE) && ENABLE_GLCACHE == 1
     GLCache_obj_metadata_t GLCache;

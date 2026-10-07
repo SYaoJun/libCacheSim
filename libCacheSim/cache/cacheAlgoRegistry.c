@@ -77,6 +77,8 @@ static const cache_algo_entry_t g_cache_algos[] = {
     {"slruv0", SLRUv0_init},
     {"tinyLFU", WTinyLFU_init},
     {"twoq", TwoQ_init},
+    {"watt", WATT_init},
+    {"WATT", WATT_init},
     {"wtinyLFU", WTinyLFU_init},
     /* these need future information and are only valid on oracle traces, so
      * callers that know the trace type should check before using them */

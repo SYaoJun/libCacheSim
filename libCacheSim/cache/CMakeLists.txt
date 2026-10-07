@@ -58,6 +58,7 @@ set(eviction_sources_c
         eviction/SLRU.c
         eviction/SLRUv0.c        # an inefficient version but easier to understand
         eviction/TwoQ.c
+        eviction/WATT.c
         eviction/WTinyLFU.c
 
         # these are sub-algorithms used by other algorithms
